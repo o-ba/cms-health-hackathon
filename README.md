@@ -1,8 +1,15 @@
 # cms-health-hackathon
 Repository for the CMS Health Checks project at #CFHack24
 
-## Project Lead
+## Project Members
+### Lead
 Nils Langner - Founder “startwind”
+### Members
+Justin Joe Kostka
+Oliver Bartsch
+Marc Nilius
+Thomas Bruehl
+Stefan Buerk
 
 ## Hashtags
 #PHP #Typo3 #Drupal #WordPress #Joomla #HealthCheck #Monitoring #Availability
@@ -19,3 +26,7 @@ In this hackathon, we want to jointly develop a health check format that works f
 
 ## Target Audience
 Developers, SysOps, administrators, CMS contributors, agencies and more.
+
+## Ressources
+[IETF Health Check Response Format for HTTP APIs](https://datatracker.ietf.org/doc/html/draft-inadarei-api-health-check#name-example-output)
+[CloudFest Hackathon Project Page](https://hackathon.cloudfest.com/project/cms-health-checks/)
