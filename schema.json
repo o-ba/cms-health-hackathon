@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "version": "1",
+  "serviceId": "example.org",
+  "description": "Health of WordPress website example.org",
+  "checks": {
+    "WordPress:Version": [
+      {
+        "componentId": "dfd6cf2b-1b6e-4412-a0b8-f6f7797a60d2",
+        "componentType": "system",
+        "observedValue": "6.4.3",
+        "status": "pass",
+        "time": "2018-01-17T03:36:48Z",
+        "output": ""
+      }
+    ],
+    "WordPress:DirectorySize": [
+      {
+        "componentId": "dfd6cf2b-1b6e-4412-a0b8-f6f7797a60d2",
+        "componentType": "system",
+        "observedValue": "2",
+        "observedUnit": "GB",
+        "status": "pass",
+        "time": "2018-01-17T03:36:48Z",
+        "output": ""
+      }
+    ],
+    "WordPress:FailedLogins": [
+      {
+        "componentId": "dfd6cf2b-1b6e-4412-a0b8-f6f7797a60d2",
+        "componentType": "system",
+        "observedValue": "20",
+        "status": "fail",
+        "time": "2018-01-17T03:36:48Z",
+        "output": "Number of failed login attempts exceeded defined threshold",
+      }
+    ],
+    "WordPress:MFAActivated": [
+      {
+        "componentId": "dfd6cf2b-1b6e-4412-a0b8-f6f7797a60d2",
+        "componentType": "system",
+        "observedValue": "username1",
+        "status": "pass",
+        "time": "2018-01-17T03:36:48Z",
+        "output": ""
+      },
+      {
+        "componentId": "dfd6cf2b-1b6e-4412-a0b8-f6f7797a60d2",
+        "componentType": "system",
+        "observedValue": "username2",
+        "status": "fail",
+        "time": "2018-01-17T03:36:48Z",
+        "output": ""
+      }
+    ],
+    "Yoast:Check1": [
+      {
+        "componentId": "dfd6cf2b-1b6e-4412-a0b8-f6f7797a60d2",
+        "componentType": "component",
+        "status": "pass",
+        "time": "2018-01-17T03:36:48Z",
+        "output": ""
+      }
+    ]
+  }
+}
