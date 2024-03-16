@@ -50,7 +50,7 @@
         "observedValue": "username2",
         "status": "fail",
         "time": "2018-01-17T03:36:48Z",
-        "output": ""
+        "output": "User username2 has not activated MFA"
       }
     ],
     "Yoast:Check1": [
