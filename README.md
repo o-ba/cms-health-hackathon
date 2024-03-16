@@ -3,13 +3,14 @@ Repository for the CMS Health Checks project at #CFHack24
 
 ## Project Members
 ### Lead
-Nils Langner - Founder “startwind”
+* Nils Langner - Founder “startwind”
 ### Members
-Justin Joe Kostka
-Oliver Bartsch
-Marc Nilius
-Thomas Bruehl
-Stefan Buerk
+* [Justin Joe Kostka](https://github.com/jujoko7CF)
+* [Marc Nilius](https://github.com/zottto)
+* [Mike WP Bullet](https://github.com/wpbullet)
+* [Oliver Bartsch](https://github.com/o-ba)
+* Stefan Buerk
+* [Thomas Bruehl](https://github.com/00Sleepy)
 
 ## Hashtags
 #PHP #Typo3 #Drupal #WordPress #Joomla #HealthCheck #Monitoring #Availability
