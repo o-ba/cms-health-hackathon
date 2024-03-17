@@ -113,7 +113,7 @@ The interface is based on HTTP communication with responses in JSON format. The 
 *(optional)* a human-friendly description of the service.
 
 #### checks
-*(required)* The checks object containing all single check data.
+*(required)* The checks object containing all single check data. "checks" contains one or more check results as an array.
 
 ##### name
 *(required)* The name of the check. It is built as "componentName:checkName", where "componentName" is the name of a single component or category and "checkName" is the name of the check itself.
