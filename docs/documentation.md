@@ -6,111 +6,118 @@ To address this flaw in modern application operation, our focus extends beyond m
 
 The project aims to collect, analyze, and provide additional data from websites with a better understanding of their health to the respective operator. The website operator or hosting company is often expected to keep the overview, but the absence of a standardized format for health checks across the manifold CMS landscape makes this a hard challenge to solve.
 
-Based on this idea, a first Proof of Concept was created at Cloudfest Hackathon 2024 with the goal to jointly develop a health check format that works for open-source systems like Drupal, Typo3, Joomla!, WordPress, and frameworks. The initial phase involves the ideation and development of a standardized format for the CMS health checks, that accommodates the unique requirements of different open-source systems and offers flexibility and extensibility. Additionally, we’re aiming to have the first basic implementation for the participating CMS systems in place that can report basic health data in a secure and privacy-friendly way.
+Based on this idea, a first Proof of Concept was created at CloudFest Hackathon 2024 with the goal to jointly develop a health check format that works for open-source systems like Drupal, TYPO3, Joomla!, WordPress, and frameworks. The initial phase involves the ideation and development of a standardized format for the CMS health checks, that accommodates the unique requirements of different open-source systems and offers flexibility and extensibility. Additionally, we’re aiming to have the first basic implementation for the participating CMS systems in place that can report basic health data in a secure and privacy-friendly way.
 
 ## Format
 
 The interface is based on HTTP communication with responses in JSON format. The format is based on the IETF draft "Health Check Response Format for HTTP APIs" (https://datatracker.ietf.org/doc/html/draft-inadarei-api-health-check-06). Please see the following example and explanation:
 
-	{
-	  "status": "pass",
-	  "version": "1",
-	  "serviceId": "example.org",
-	  "description": "Health of WordPress website example.org",
-	  "checks": {
-		"WordPress:Version": [
-		  {
-			"componentId": "identifier1",
-			"componentType": "system",
-			"observedValue": "6.4.3",
-			"status": "pass",
-			"time": "2018-01-17T03:36:48Z",
-			"output": ""
-		  }
-		],
-		"WordPress:DirectorySize": [
-		  {
-			"componentId": "identifier2",
-			"componentType": "system",
-			"observedValue": "25",
-			"observedUnit": "GB",
-			"status": "warn",
-			"time": "2018-01-17T03:36:48Z",
-			"output": "Directory size of installation exceeds defined threshold"
-		  }
-		],
-		"WordPress:FailedLogins": [
-		  {
-			"componentId": "identifier3",
-			"componentType": "system",
-			"observedValue": "20",
-			"status": "warn",
-			"time": "2018-01-17T03:36:48Z",
-			"output": "Number of failed login attempts in the last 24 hours exceeded defined threshold"
-		  }
-		],
-		"WordPress:OutdatedPlugins": [
-		  {
-			"componentId": "identifier4",
-			"componentType": "system",		
-			"observedValue": "5",
-			"status": "fail",
-			"time": "2018-01-17T03:36:48Z",
-			"output": "Some plugins are outdated and need to be updated"
-		  }
-		],
-		"WordPress:UserMFAActivated": [
-		  {
-			"componentId": "identifier5",
-			"componentType": "system",
-			"observedValue": "username1",
-			"status": "pass",
-			"time": "2018-01-17T03:36:48Z",
-			"output": ""
-		  },
-		  {
-			"componentId": "identifier5",
-			"componentType": "system",
-			"observedValue": "username2",
-			"status": "fail",
-			"time": "2018-01-17T03:36:48Z",
-			"output": "User username2 has not activated MFA"
-		  }
-		],
-		"Yoast:Check1": [
-		  {
-			"componentId": "identifier6",
-			"componentType": "component",
-			"status": "pass",
-			"time": "2018-01-17T03:36:48Z",
-			"output": ""
-		  }
-		],
-		"SecurityPlugin:FilePermissions": [
-		  {
-			"componentId": "identifier6",
-			"componentType": "component",
-			"status": "fail",
-			"time": "2018-01-17T03:36:48Z",
-			"output": "File permissions are not correctly set"
-		  }
-		],
-		"WordPress:LastUserLoginTime": [
-		  {
-			"componentId": "identifier7",
-			"componentType": "system",
-			"status": "info",
-			"time": "2018-01-17T03:36:48Z",
-			"output": "2018-01-17T03:36:48Z"
-		  }
-		]
+```json
+{
+  "status": "pass",
+  "version": "1",
+  "serviceId": "example.org",
+  "description": "Health of WordPress website example.org",
+  "checks": {
+	"WordPress:Version": [
+	  {
+		"componentId": "identifier1",
+		"componentType": "system",
+		"observedValue": "6.4.3",
+		"status": "pass",
+		"time": "2018-01-17T03:36:48Z",
+		"output": ""
 	  }
-	}
+	],
+	"WordPress:DirectorySize": [
+	  {
+		"componentId": "identifier2",
+		"componentType": "system",
+		"observedValue": "25",
+		"observedUnit": "GB",
+		"status": "warn",
+		"time": "2018-01-17T03:36:48Z",
+		"output": "Directory size of installation exceeds defined threshold"
+	  }
+	],
+	"WordPress:FailedLogins": [
+	  {
+		"componentId": "identifier3",
+		"componentType": "system",
+		"observedValue": "20",
+		"status": "warn",
+		"time": "2018-01-17T03:36:48Z",
+		"output": "Number of failed login attempts in the last 24 hours exceeded defined threshold"
+	  }
+	],
+	"WordPress:OutdatedPlugins": [
+	  {
+		"componentId": "identifier4",
+		"componentType": "system",		
+		"observedValue": "5",
+		"status": "fail",
+		"time": "2018-01-17T03:36:48Z",
+		"output": "Some plugins are outdated and need to be updated"
+	  }
+	],
+	"WordPress:UserMFAActivated": [
+	  {
+		"componentId": "identifier5.1",
+		"componentType": "system",
+		"observedValue": "username1",
+		"status": "pass",
+		"time": "2018-01-17T03:36:48Z",
+		"output": ""
+	  },
+	  {
+		"componentId": "identifier5.2",
+		"componentType": "system",
+		"observedValue": "username2",
+		"status": "fail",
+		"time": "2018-01-17T03:36:48Z",
+		"output": "User username2 has not activated MFA"
+	  }
+	],
+	"Yoast:Check1": [
+	  {
+		"componentId": "identifier6",
+		"componentType": "component",
+		"status": "pass",
+		"time": "2018-01-17T03:36:48Z",
+		"output": ""
+	  }
+	],
+	"SecurityPlugin:FilePermissions": [
+	  {
+		"componentId": "identifier7",
+		"componentType": "component",
+		"status": "fail",
+		"time": "2018-01-17T03:36:48Z",
+		"output": "File permissions are not correctly set"
+	  }
+	],
+	"WordPress:LastUserLoginTime": [
+	  {
+		"componentId": "identifier8",
+		"componentType": "system",
+		"status": "info",
+		"time": "2018-01-17T03:36:48Z",
+		"output": "2018-01-17T03:36:48Z"
+	  }
+	]
+  }
+}
+```
 
 ### Field explanation
 
 #### status
 *(required)* The overall status of all checks. It has a value of "pass", "fail" or "warn".
+
+The status should set to:
+* "pass" if the CMS is fully operational and all checks also pass,
+* "fail" if the CMS is not working or one or more checks fail,
+* "warn" if the CMS has issues the admin should care about but is still operational or one or more checks warn and none check fail. 
 
 #### version
 *(optional)* public version of the health check API.
@@ -128,7 +135,7 @@ The interface is based on HTTP communication with responses in JSON format. The 
 *(required)* The name of the check. It is built as "componentName:checkName", where "componentName" is the name of a single component or category and "checkName" is the name of the check itself.
 
 ##### componentId
-*(optional)* The ID of the component.
+*(optional)* The unique ID of the component.
 
 ##### componentType
 *(optional)* Should be present, if the name has a "componentName". One of "system" or "component".
@@ -140,7 +147,7 @@ The interface is based on HTTP communication with responses in JSON format. The 
 *(optional)* The unit of measurement the observedValue is reported in.
 
 ##### status
-*(required)* The status of this check with the values "info", "pass", "fail" or "warn".
+*(required)* The status of this check with the values "pass", "fail", "warn" or "info".
 
 ##### time
 *(optional)* is the date-time, in ISO8601 format, at which the reading of the observedValue was recorded or the check itself happened.
