@@ -94,6 +94,15 @@ The interface is based on HTTP communication with responses in JSON format. The 
 			"time": "2018-01-17T03:36:48Z",
 			"output": "File permissions are not correctly set"
 		  }
+		],
+		"WordPress:LastUserLoginTime": [
+		  {
+			"componentId": "identifier7",
+			"componentType": "system",
+			"status": "info",
+			"time": "2018-01-17T03:36:48Z",
+			"output": "2018-01-17T03:36:48Z"
+		  }
 		]
 	  }
 	}
@@ -131,13 +140,13 @@ The interface is based on HTTP communication with responses in JSON format. The 
 *(optional)* The unit of measurement the observedValue is reported in.
 
 ##### status
-*(required)* The status of this check with the values "pass", "fail" or "warn".
+*(required)* The status of this check with the values "info", "pass", "fail" or "warn".
 
 ##### time
 *(optional)* is the date-time, in ISO8601 format, at which the reading of the observedValue was recorded or the check itself happened.
 
 ##### output
-*(optional)* the raw error or warn message, possibly human-readable. Should be ommitted for status "pass".
+*(optional)* the raw error or warn message, possibly human-readable. Should be ommitted for status "pass". Can also contain additional information for the status "info".
 
 ## Security
 

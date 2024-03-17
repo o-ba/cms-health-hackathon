@@ -80,6 +80,15 @@
         "time": "2018-01-17T03:36:48Z",
         "output": "File permissions are not correctly set"
       }
+	],
+	"WordPress:LastUserLoginTime": [
+      {
+        "componentId": "identifier7",
+        "componentType": "system",
+        "status": "info",
+        "time": "2018-01-17T03:36:48Z",
+        "output": "2018-01-17T03:36:48Z"
+      }
 	]
   }
 }
