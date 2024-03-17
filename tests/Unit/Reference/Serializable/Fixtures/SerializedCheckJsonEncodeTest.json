@@ -1,0 +1,9 @@
+{
+    "componentId": "component-id",
+    "componentType": "system",
+    "status": "pass",
+    "observedValue": "1",
+    "observedUnit": "unit",
+    "output": "some-output",
+    "time": "2024-03-16T12:34:56+00:00"
+}
