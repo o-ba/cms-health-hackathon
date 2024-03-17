@@ -114,10 +114,10 @@ The interface is based on HTTP communication with responses in JSON format. The 
 #### status
 *(required)* The overall status of all checks. It has a value of "pass", "fail" or "warn".
 
-The status should set to:
+The status should be set to:
 * "pass" if the CMS is fully operational and all checks also pass,
 * "fail" if the CMS is not working or one or more checks fail,
-* "warn" if the CMS has issues the admin should care about but is still operational or one or more checks warn and none check fail. 
+* "warn" if the CMS has issues the admin should care about, but is still operational or one or more checks warn and no checks fail. 
 
 #### version
 *(optional)* public version of the health check API.
