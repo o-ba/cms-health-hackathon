@@ -1,0 +1,244 @@
+{
+	"wordpress_version": {
+		"label": "WordPress update available (6.4.3)",
+		"status": "recommended",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>A new version of WordPress is available.</p>",
+		"actions": "<a href=\"https://dev.wp-wartung24.de/wp-admin/update-core.php\">Install the latest version of WordPress</a>",
+		"test": "wordpress_version"
+	},
+	"plugin_version": {
+		"label": "You should remove inactive plugins",
+		"status": "recommended",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>Plugins extend your site&#8217;s functionality with things like contact forms, ecommerce and much more. That means they have deep access to your site, so it&#8217;s vital to keep them up to date.</p><p>Your site has 28 plugins waiting to be updated.</p><p>Your site has 20 inactive plugins. Inactive plugins are tempting targets for attackers. If you are not going to use a plugin, you should consider removing it.</p>",
+		"actions": "<p><a href=\"https://dev.wp-wartung24.de/wp-admin/plugins.php\">Manage your plugins</a></p><p><a href=\"https://dev.wp-wartung24.de/wp-admin/plugins.php?plugin_status=upgrade\">Update your plugins</a></p><p><a href=\"https://dev.wp-wartung24.de/wp-admin/plugins.php?plugin_status=inactive\">Manage inactive plugins</a></p>",
+		"test": "plugin_version"
+	},
+	"theme_version": {
+		"label": "You should remove inactive themes",
+		"status": "recommended",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>Themes add your site&#8217;s look and feel. It&#8217;s important to keep them up to date, to stay consistent with your brand and keep your site secure.</p><p>Your site has 6 themes waiting to be updated.</p><p>Your site has 5 inactive themes, other than Twenty Twenty-Three, the default WordPress theme, and GeneratePress, your active theme. You should consider removing any unused themes to enhance your site&#8217;s security.</p>",
+		"actions": "<p><a href=\"https://dev.wp-wartung24.de/wp-admin/themes.php\">Manage your themes</a></p>",
+		"test": "theme_version"
+	},
+	"php_version": {
+		"label": "Your site is running the current version of PHP (8.0.30)",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>PHP is one of the programming languages used to build WordPress. Newer versions of PHP receive regular security updates and may increase your site&#8217;s performance. The minimum recommended version of PHP is 7.4.</p>",
+		"actions": "<p><a href=\"https://de.wordpress.org/support/update-php/\" target=\"_blank\" rel=\"noopener\">Learn more about updating PHP <span class=\"screen-reader-text\">(öffnet in neuem Tab)</span><span aria-hidden=\"true\" class=\"dashicons dashicons-external\"></span></a></p>",
+		"test": "php_version"
+	},
+	"php_extensions": {
+		"label": "Required and recommended modules are installed",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>PHP modules perform most of the tasks on the server that make your site run. Any changes to these must be made by your server administrator.</p><p>The WordPress Hosting Team maintains a list of those modules, both recommended and required, in <a href=\"https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions\" target=\"_blank\" rel=\"noopener\">the team handbook <span class=\"screen-reader-text\">(öffnet in neuem Tab)</span><span aria-hidden=\"true\" class=\"dashicons dashicons-external\"></span></a>.</p>",
+		"actions": "",
+		"test": "php_extensions"
+	},
+	"php_default_timezone": {
+		"label": "PHP default timezone is valid",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>PHP default timezone was configured by WordPress on loading. This is necessary for correct calculations of dates and times.</p>",
+		"actions": "",
+		"test": "php_default_timezone"
+	},
+	"php_sessions": {
+		"label": "No PHP sessions detected",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>PHP sessions created by a <code>session_start()</code> function call may interfere with REST API and loopback requests. An active session should be closed by <code>session_write_close()</code> before making any HTTP requests.</p>",
+		"test": "php_sessions"
+	},
+	"sql_server": {
+		"label": "SQL server is up to date",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>The SQL server is a required piece of software for the database WordPress uses to store all your site&#8217;s content and settings.</p><p>You are using a <code>wp-content/db.php</code> drop-in which might mean that a MariaDB database is not being used.</p>",
+		"actions": "<p><a href=\"https://wordpress.org/about/requirements/\" target=\"_blank\" rel=\"noopener\">Learn more about what WordPress requires to run. <span class=\"screen-reader-text\">(öffnet in neuem Tab)</span><span aria-hidden=\"true\" class=\"dashicons dashicons-external\"></span></a></p>",
+		"test": "sql_server"
+	},
+	"utf8mb4_support": {
+		"label": "UTF8MB4 is supported",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>UTF8MB4 is the character set WordPress prefers for database storage because it safely supports the widest set of characters and encodings, including Emoji, enabling better support for non-English languages.</p><p>Your MariaDB version supports utf8mb4.</p>",
+		"actions": "",
+		"test": "utf8mb4_support"
+	},
+	"ssl_support": {
+		"label": "Your site can communicate securely with other services",
+		"status": "good",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>Securely communicating between servers are needed for transactions such as fetching files, conducting sales on store sites, and much more.</p>",
+		"actions": "",
+		"test": "ssl_support"
+	},
+	"scheduled_events": {
+		"label": "Scheduled events are running",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>Scheduled events are what periodically looks for updates to plugins, themes and WordPress itself. It is also what makes sure scheduled posts are published on time. It may also be used by various plugins to make sure that planned actions are executed.</p>",
+		"actions": "",
+		"test": "scheduled_events"
+	},
+	"http_requests": {
+		"label": "HTTP requests seem to be working as expected",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>It is possible for site maintainers to block all, or some, communication to other sites and services. If set up incorrectly, this may prevent plugins and themes from working as intended.</p>",
+		"actions": "",
+		"test": "http_requests"
+	},
+	"rest_availability": {
+		"label": "The REST API encountered an unexpected result",
+		"status": "recommended",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>The REST API is one way that WordPress and other applications communicate with the server. For example, the block editor screen relies on the REST API to display and save your posts and pages.</p><p>When testing the REST API, an unexpected result was returned:</p><p>REST API Endpoint: https://dev.wp-wartung24.de/wp-json/wp/v2/types/post?context=edit<br>REST API Response: (403) Forbidden</p>",
+		"actions": "",
+		"test": "rest_availability"
+	},
+	"debug_enabled": {
+		"label": "Your site is set to display errors to site visitors",
+		"status": "critical",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>Debug mode is often enabled to gather more details about an error or site failure, but may contain sensitive information which should not be available on a publicly available website.</p><p>The value, <code>WP_DEBUG_LOG</code>, has been added to this website&#8217;s configuration file. This means any errors on the site will be written to a file which is potentially available to all users.</p><p>The value, <code>WP_DEBUG_DISPLAY</code>, has either been enabled by <code>WP_DEBUG</code> or added to your configuration file. This will make errors display on the front end of your site.</p>",
+		"actions": "<p><a href=\"https://wordpress.org/support/article/debugging-in-wordpress/\" target=\"_blank\" rel=\"noopener\">Learn more about debugging in WordPress. <span class=\"screen-reader-text\">(öffnet in neuem Tab)</span><span aria-hidden=\"true\" class=\"dashicons dashicons-external\"></span></a></p>",
+		"test": "is_in_debug_mode"
+	},
+	"file_uploads": {
+		"label": "Files can be uploaded",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>The <code>file_uploads</code> directive in <code>php.ini</code> determines if uploading files is allowed on your site.</p>",
+		"actions": "",
+		"test": "file_uploads"
+	},
+	"plugin_theme_auto_updates": {
+		"label": "Plugin and theme auto-updates appear to be configured correctly",
+		"status": "good",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>Plugin and theme auto-updates ensure that the latest versions are always installed.</p>",
+		"actions": "",
+		"test": "plugin_theme_auto_updates"
+	},
+	"persistent_object_cache": {
+		"test": "persistent_object_cache",
+		"status": "recommended",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"label": "You should use a persistent object cache",
+		"description": "<p>A persistent object cache makes your site&#8217;s database more efficient, resulting in faster load times because WordPress can retrieve your site&#8217;s content and settings much more quickly.</p><p>Your hosting provider can tell you if a persistent object cache can be enabled on your site. Your host appears to support the following object caching services: Redis.</p>",
+		"actions": "<p><a href=\"https://wordpress.org/support/article/optimization/#persistent-object-cache\" target=\"_blank\" rel=\"noopener\">Learn more about persistent object caching. <span class=\"screen-reader-text\">(öffnet in neuem Tab)</span><span aria-hidden=\"true\" class=\"dashicons dashicons-external\"></span></a></p>"
+	},
+	"dotorg_communication": {
+		"label": "Can communicate with WordPress.org",
+		"status": "good",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>Communicating with the WordPress servers is used to check for new versions, and to both install and update WordPress core, themes or plugins.</p>",
+		"actions": "",
+		"test": "dotorg_communication"
+	},
+	"background_updates": {
+		"label": "Background updates are working",
+		"status": "good",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>Background updates ensure that WordPress can auto-update if a security update is released for the version you are currently using.</p>",
+		"actions": "",
+		"test": "background_updates"
+	},
+	"loopback_requests": {
+		"label": "Your site can perform loopback requests",
+		"status": "good",
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>Loopback requests are used to run scheduled events, and are also used by the built-in editors for themes and plugins to verify code stability.</p>",
+		"actions": "",
+		"test": "loopback_requests"
+	},
+	"https_status": {
+		"label": "Your website is using an active HTTPS connection",
+		"status": "good",
+		"badge": {
+			"label": "Security",
+			"color": "blue"
+		},
+		"description": "<p>An HTTPS connection is a more secure way of browsing the web. Many services now have HTTPS as a requirement. HTTPS allows you to take advantage of new features that can increase site speed, improve search rankings, and gain the trust of your visitors by helping to protect their online privacy.</p>",
+		"actions": "<p><a href=\"https://wordpress.org/support/article/why-should-i-use-https/\" target=\"_blank\" rel=\"noopener\">Learn more about why you should use HTTPS<span class=\"screen-reader-text\"> (öffnet in neuem Tab)</span><span aria-hidden=\"true\" class=\"dashicons dashicons-external\"></span></a></p>",
+		"test": "https_status"
+	},
+	"authorization_header": "KEIN BOCK DRAUF",
+	"page_cache": {
+		"badge": {
+			"label": "Performance",
+			"color": "blue"
+		},
+		"description": "<p>Page cache enhances the speed and performance of your site by saving and serving static pages instead of calling for a page every time a user visits.</p><p>Page cache is detected by looking for an active page cache plugin as well as making three requests to the homepage and looking for one or more of the following HTTP client caching response headers:</p><code>cache-control</code>, <code>expires</code>, <code>age</code>, <code>last-modified</code>, <code>etag</code>, <code>x-cache-enabled</code>, <code>x-cache-disabled</code>, <code>x-srcache-store-status</code>, <code>x-srcache-fetch-status.</code><ul><li><span class=\"dashicons dashicons-yes-alt\"></span> Median server response time was 23 milliseconds. This is less than the recommended 600 milliseconds threshold.</li><li><span class=\"dashicons dashicons-yes-alt\"></span> There was 1 client caching response header detected: <code>last-modified</code>.</li></ul>",
+		"test": "page_cache",
+		"status": "good",
+		"label": "Page cache is detected and the server response time is good",
+		"actions": "<p><a href=\"https://wordpress.org/support/article/optimization/#Caching\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about page cache <span class=\"screen-reader-text\">(öffnet in neuem Tab)</span><span aria-hidden=\"true\" class=\"dashicons dashicons-external\"></span></a></p>"
+	}
+}
