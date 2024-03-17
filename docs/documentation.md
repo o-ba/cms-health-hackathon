@@ -157,6 +157,8 @@ The status should be set to:
 
 ## Security
 
+For security reasons of the provided informations the implemented CMS healh check API should only reply to a HTTPS POST request and only if the request brings a security token. The security tolken should be at least 16 characters of three groups (uppercase, lowercase, digits). The implementation in the CMS should provide a function to revoke the security token. 
+
 ## CMS Integration
 
 To handle CMS integration, different client plugins / extensions / modules could be used. These define the endpoints needed for the communication to the monitoring server and deliver the application-based check results based on the checks that are implemented in the client component or CMS.
